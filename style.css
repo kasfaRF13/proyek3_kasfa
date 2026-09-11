@@ -1,0 +1,84 @@
+:root {
+    --color-primary: #0056b3;
+    --color-text: #333333;
+    --color-bg: #f4f7f6;
+    --font-main: system-ui, sans-serif;
+    --radius-md: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+nav-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+.nav-link:hover {
+    text-decoration: underline;
+    color: #004494;
+}
+.nav-link:focus-visible {
+    outline: 2px dashed var(--color-text);
+    outline-offset: 4px;
+}
+
+.button:focus-visible {
+    outline: 3px dashed var(--color-text);
+    outline-offset: 4px;
+}
+
+img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+}
+
+main.container {
+    display: flex;
+    gap: 1.5rem;
+        align-items: stretch; 
+}
+
+    .card {
+        flex: 1; 
+        margin-bottom: 0; 
+    }
+}

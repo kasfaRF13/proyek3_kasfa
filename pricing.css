@@ -1,0 +1,130 @@
+/*
+    1. 
+*/
+
+:root {
+    
+    --color-primary: #0056b3;      
+    --color-primary-dark: #004494; 
+    --color-bg-page: #f4f7f6;      
+    --color-bg-card: #ffffff;      
+    --color-text: #333333;         
+    
+    
+    --font-main: system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg-page);
+    color: var(--color-text);
+    padding: 2rem 1rem;
+}
+
+/*
+    2.
+*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.pricing-list {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+    margin-top: 2rem;
+}
+
+/*
+    3.
+*/
+
+.price-card {
+    background-color: var(--color-bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.price-card--featured {
+    background-color: var(--color-primary);
+    color: white; 
+    border: none;
+    transform: scale(1.05); 
+}
+
+/*
+    4.
+*/
+
+/* Breakpoint di 768px (Tablet/Laptop) */
+@media (min-width: 768px) {
+    .pricing-list {
+        flex-direction: row; /* Berubah menjadi sejajar ke samping! */
+        justify-content: center;
+        align-items: center; /* Menyelaraskan tinggi kartu, terutama kartu tengah yang membesar */
+    }
+
+    .price-card {
+        flex: 1; /* Membagi ruang agar ketiga kartu sama lebar */
+        max-width: 350px; 
+    }
+}
+
+/*
+    5.
+*/
+
+.price-card ul {
+    list-style-type: none;
+    padding: 1.5rem 0;
+}
+
+.price-card li {
+    margin-bottom: 0.5rem;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none; 
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
+}
+
+
+.price-card--featured .button {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+.price-card--featured .button:hover {
+    background-color: #f0f0f0;
+    color: var(--color-primary-dark);
+}
+
+
+.button:focus-visible {
+    outline: 3px dashed var(--color-text); 
+    outline-offset: 4px; 
+}
